@@ -1,7 +1,7 @@
 import { El } from "../../../script";
 import { svgs } from "../../../svgs";
 
-export const logoElement = El({
+ const logoElement = El({
     element: "div",
     children: [
       El({
