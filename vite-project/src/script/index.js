@@ -16,11 +16,8 @@ export function El({
       elem.append(child);
     }
   }
-  // if (eventListener) {
-  //   eventListener.map((el) => elem.addEventListener(el.event, el.callback));
-  // }
   if (eventListener) {
-    elem.addEventListener(eventListener.event, eventListener.callBack);
+    eventListener.map((el) => elem.addEventListener(el.event, el.callback));
   }
   if (dataset) {
     for (const key in dataset) {
