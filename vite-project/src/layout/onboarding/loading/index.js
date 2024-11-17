@@ -16,10 +16,10 @@ const logoElement = El({
     El({
       element: "span",
       children: ["Shoea"],
-      className: "text-xl font-semibold text-gray-800",
+      className: "text-3xl font-bold text-gray-800",
     }),
   ],
-  className: "flex items-center space-x-2",
+  className: "flex items-center space-x-2 mt-36",
 });
 
 const loadingElement = El({
@@ -27,7 +27,8 @@ const loadingElement = El({
   children: [
     El({
       element: "div",
-      className: "animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900",
+      className:
+        "animate-spin rounded-full h-8 w-8 border-b-4 border-gray-900 mt-60",
     }),
   ],
   className: "mt-8",

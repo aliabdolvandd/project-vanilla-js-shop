@@ -26,7 +26,7 @@ function createPage(pageData) {
 
   const container = El({
     element: "div",
-    className: "flex flex-col items-center justify-between h-screen  p-4",
+    className: "flex flex-col items-center justify-between h-screen ",
   });
 
   const imageWrapper = El({
@@ -35,7 +35,7 @@ function createPage(pageData) {
     children: [
       El({
         element: "img",
-        className: "rounded-lg shadow-lg max-h-96",
+        className: " shadow-lg h-full w-full",
         src: imageSrc,
         alt: altText,
       }),
@@ -44,11 +44,11 @@ function createPage(pageData) {
 
   const textContent = El({
     element: "div",
-    className: "text-center px-4",
+    className: "text-center ",
     children: [
       El({
         element: "h2",
-        className: "text-2xl font-medium text-gray-800",
+        className: "text-3xl font-medium text-gray-800",
         innerText: message,
       }),
     ],
@@ -73,7 +73,8 @@ function createPage(pageData) {
     currentPageIndex === pages.length - 1 ? "Get Started" : "Next";
   const nextButton = El({
     element: "button",
-    className: "mt-6  h-10 w-72 bg-gray-800 text-white rounded-full shadow-md",
+    className:
+      "mb-5  h-10 min-w-96 bg-gray-800 text-white rounded-full shadow-md",
     innerText: buttonText,
     eventListener: [
       {
