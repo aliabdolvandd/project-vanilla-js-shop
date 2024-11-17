@@ -3,7 +3,7 @@ import { El } from "../script";
 import { getStorage, render } from "../utils/render";
 import { createFooter } from "./footer";
 
-export const layout = (children) => {
+export const layout = async (children) => {
   root.innerHTML = "";
   // const header = El({
   //   element: "header",
@@ -30,9 +30,10 @@ export const layout = (children) => {
   // });
   const footerEl = El({
     element: "footer",
+    className: "fixed bottom-0 left-0 w-full",
     children: [createFooter()],
   });
-  if (getStorage("visitedFirstTime")) render(children(), footerEl);
+  if (getStorage("visitedFirstTime")) render(await children(), footerEl);
   else {
     router.navigate("/onboarding");
   }

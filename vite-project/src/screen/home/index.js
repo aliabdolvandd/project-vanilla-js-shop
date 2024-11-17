@@ -1,5 +1,8 @@
+import { data } from "autoprefixer";
+import { getData } from "../../api/getApi";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
+import { renderProduct } from "../../utils/render";
 
 export const header = function () {
   return El({
@@ -120,19 +123,80 @@ const brandFilter = function () {
   });
 };
 
-
-const allProduct = ()=> {
+export const allProduct = (data) => {
   return El({
-    element:"div",
-    className:
-  })
-}
+    element: "div",
+    className: "flex justify-center items-center flex-wrap gap-4 pb-24",
+    children: data.map((product) => {
+      return El({
+        element: "div",
+        className:
+          "w-48 h-48 border overflow-hidden border-slate-600 shadow rounded-2xl flex flex-col",
+        children: [
+          El({
+            element: "img",
+            className: "w-full h-32 object-cover",
+            restAttrs: { src: product.images, alt: product.title },
+          }),
+          El({
+            element: "span",
+            className: "text-center text-sm font-medium mt-2",
+            textContent: product.title,
+          }),
+          El({
+            element: "span",
+            className: "text-center text-gray-500 text-xs",
+            textContent: `${product.price}$`,
+          }),
+        ],
+      });
+    }),
+  });
+};
+// export const allProduct = (data) => {
+//   return El({
+//     element: "div",
+//     className: "flex justify-center items-center flex-wrap gap-4 pb-24",
+//     children: data.map((product) => {
+//       return (
+//         El({
+//           element: "div",
+//           className:
+//             "w-48 h-30 border overflow-hidden border-slate-600 shadow rounded-2xl flex flex-col",
+//           children: [
+//             El({
+//               element: "img",
+//               className: "w-full h-32 object-cover",
+//               restAttrs: { src: product.images, alt: product.title },
+//             }),
+//           ],
+//         }),
+//         El({
+//           element: "div",
+//           className: "flex flex-col items-center mt-2 px-2",
+//           children: [
+//             El({
+//               element: "span",
+//               className:
+//                 "text-center text-sm font-medium text-gray-800 truncate",
+//               textContent: product.title,
+//             }),
+//             El({
+//               element: "span",
+//               className: "text-center text-gray-500 text-sm mt-1",
+//               textContent: product.price,
+//             }),
+//           ],
+//         })
+//       );
+//     }),
+//   });
+// };
 
-
-export const home = () => {
+export const home = async () => {
   return El({
     element: "div",
     className: "flex-1",
-    children: [header(), search(), brandFilter()],
+    children: [header(), search(), brandFilter(), await renderProduct()],
   });
 };

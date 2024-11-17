@@ -102,4 +102,4 @@ export function renderPage(index) {
   app.append(page);
 }
 
-renderPage();
+// renderPage();

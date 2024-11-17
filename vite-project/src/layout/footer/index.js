@@ -1,3 +1,4 @@
+import { router } from "../../router/index.routes";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
 import { render } from "../../utils/render";
@@ -6,22 +7,27 @@ const footerItems = [
   {
     icon: svgs.Home,
     text: "Home",
+    path: "/",
   },
   {
     icon: svgs.Cart,
     text: "Cart",
+    path: "/cart",
   },
   {
     icon: svgs.Order,
     text: "Order",
+    path: "/order",
   },
   {
     icon: svgs.Wallet,
     text: "Wallet",
+    path: "/wallet",
   },
   {
     icon: svgs.profile,
     text: "Profile",
+    path: "/profile",
   },
 ];
 
@@ -37,8 +43,8 @@ export function createFooter() {
         eventListener: [
           {
             event: "click",
-            callback: (E) => {
-              console.log(item.text);
+            callback: (e) => {
+              router.navigate(item.path);
             },
           },
         ],
