@@ -123,6 +123,37 @@ const brandFilter = function () {
   });
 };
 
+// export const allProduct = (data) => {
+//   return El({
+//     element: "div",
+//     className: "flex justify-center items-center flex-wrap gap-4 pb-24",
+//     children: data.map((product) => {
+//       return El({
+//         element: "div",
+//         className:
+//           "w-48 h-48 border overflow-hidden border-slate-600 shadow rounded-2xl flex flex-col",
+//         children: [
+//           El({
+//             element: "img",
+//             className: "w-full h-32 object-cover",
+//             restAttrs: { src: product.images, alt: product.title },
+//           }),
+//           El({
+//             element: "span",
+//             className: "text-center text-sm font-medium mt-2",
+//             textContent: product.title,
+//           }),
+//           El({
+//             element: "span",
+//             className: "text-center text-gray-500 text-xs",
+//             textContent: `${product.price}$`,
+//           }),
+//         ],
+//       });
+//     }),
+//   });
+// };
+
 export const allProduct = (data) => {
   return El({
     element: "div",
@@ -153,6 +184,7 @@ export const allProduct = (data) => {
     }),
   });
 };
+
 // export const allProduct = (data) => {
 //   return El({
 //     element: "div",
