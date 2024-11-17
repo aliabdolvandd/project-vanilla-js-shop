@@ -161,22 +161,21 @@ export const allProduct = (data) => {
     children: data.map((product) => {
       return El({
         element: "div",
-        className:
-          "w-48 h-48 border overflow-hidden border-slate-600 shadow rounded-2xl flex flex-col",
+        className: "w-48 h-48  overflow-hidden  flex flex-col",
         children: [
           El({
             element: "img",
-            className: "w-full h-32 object-cover",
+            className: "w-full h-32 object-cover rounded-xl",
             restAttrs: { src: product.images, alt: product.title },
           }),
           El({
             element: "span",
-            className: "text-center text-sm font-medium mt-2",
+            className: "text-left text-xl font-bold mt-2 ml-3",
             textContent: product.title,
           }),
           El({
             element: "span",
-            className: "text-center text-gray-500 text-xs",
+            className: "text-left text-[#152536] text-lg ml-3 font-semibold",
             textContent: `${product.price}$`,
           }),
         ],
