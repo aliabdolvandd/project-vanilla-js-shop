@@ -1,3 +1,5 @@
+import { root } from "../router/index.routes";
+
 export function El({
   element,
   children,
@@ -5,6 +7,7 @@ export function El({
   dataset,
   restAttrs = {},
   className = "",
+  style,
   ...rest
 }) {
   const elem = document.createElement(element);
@@ -24,6 +27,13 @@ export function El({
       elem.dataset[key] = dataset[key];
     }
   }
+
+  if (style) {
+    for (const key in style) {
+      elem.style[key] = style[key];
+    }
+  }
+
   for (const key in restAttrs) {
     elem.setAttribute(key, restAttrs[key]);
   }

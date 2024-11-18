@@ -1,8 +1,9 @@
 import { El } from "../../script";
 import { router } from "../../router/index.routes";
 import { renderProduct, renderProductFilter } from "../../utils/render";
+import { svgs } from "../../svgs";
 
-const brands = [
+export const brands = [
   { logo: "/images/nike.png", name: "nike" },
   { logo: "/images/adidas.png", name: "adidas" },
   { logo: "/images/puma.png", name: "puma" },
@@ -67,7 +68,7 @@ export const filterHeader = (brand) => {
       El({
         element: "button",
         className: "text-gray-700 text-2xl font-semibold",
-        textContent: "←",
+        innerHTML: svgs.Back,
         eventListener: [
           {
             event: "click",

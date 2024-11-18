@@ -6,6 +6,7 @@ import { renderProduct } from "../../utils/render";
 import { mostPopular } from "./popular";
 import { categories } from "./list";
 import { brandFilter, filterHeader } from "./brandFilter";
+import { router } from "../../router/index.routes";
 
 export const header = function () {
   return El({
@@ -105,6 +106,14 @@ export const allProduct = (data) => {
             className: "text-left text-[#152536] text-lg ml-3 font-semibold",
             textContent: `${product.price}$`,
           }),
+        ],
+        eventListener: [
+          {
+            event: "click",
+            callback: () => {
+              router.navigate(`/product/${product.id}`);
+            },
+          },
         ],
       });
     }),

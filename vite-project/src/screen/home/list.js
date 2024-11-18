@@ -2,20 +2,16 @@ import { El } from "../../script";
 import { renderProduct } from "../../utils/render";
 
 const categoriesList = [
-  {
-    name: "All",
-  },
-  {
-    name: "Nike",
-  },
-  {
-    name: "Adidas",
-  },
-  {
-    name: "Puma",
-  },
+  { name: "all" },
+  { name: "nike" },
+  { name: "adidas" },
+  { name: "puma" },
+  { name: "asics" },
+  { name: "converse" },
+  { name: "newbalance" },
+  { name: "reebok" },
 ];
-let buttonAll = "All";
+let buttonAll = "all";
 
 export const categories = () => {
   return El({

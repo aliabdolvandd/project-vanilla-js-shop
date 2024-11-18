@@ -1,5 +1,6 @@
 import { getData } from "../api/getApi";
 import { root } from "../router/index.routes";
+import { detail } from "../screen/detailePage";
 import { allProduct } from "../screen/home";
 import { filterHeader } from "../screen/home/brandFilter";
 import { El } from "../script";
@@ -32,4 +33,11 @@ export const renderProductFilter = async (params) => {
     children: [filterHeader(brand), allProduct(data)],
   });
   return wrapper;
+};
+
+export const renderDetaile = async (params) => {
+  // cpnsole.log(params);
+  const data = await getData(`/Products/${params.data.id}`);
+  console.log(params);
+  return detail(data);
 };
