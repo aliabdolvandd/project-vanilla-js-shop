@@ -4,6 +4,8 @@ import { getStorage, render } from "../utils/render";
 import { createFooter } from "./footer";
 
 export const layout = async (children) => {
+  // console.log(await children);
+
   root.innerHTML = "";
   // const header = El({
   //   element: "header",
@@ -33,8 +35,9 @@ export const layout = async (children) => {
     className: "fixed bottom-0 left-0 w-full",
     children: [createFooter()],
   });
-  if (getStorage("visitedFirstTime")) render(await children(), footerEl);
-  else {
+  if (getStorage("visitedFirstTime")) {
+    render(await children(), footerEl);
+  } else {
     router.navigate("/onboarding");
   }
 };

@@ -5,7 +5,7 @@ import { renderProduct } from "../../utils/render";
 export const mostPopular = () => {
   return El({
     element: "div",
-    className: "flex justify-between items-center mb-4 w-96 ml-5",
+    className: "flex justify-between items-center mb-4 w-[410px] ml-6",
     children: [
       El({
         element: "h2",

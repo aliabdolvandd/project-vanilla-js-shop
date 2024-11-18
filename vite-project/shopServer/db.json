@@ -36,17 +36,8 @@
       "title": "adidas",
       "price": 245,
       "order": 0,
-      "size": [
-        42,
-        41,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "yellow",
-        "gray"
-      ],
+      "size": [42, 41, 40],
+      "color": ["rose", "emerald", "yellow", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/1.webp",
       "popular": true
@@ -56,17 +47,8 @@
       "title": "adidas",
       "price": 145,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/2.webp",
       "popular": false
@@ -76,17 +58,8 @@
       "title": "adidas",
       "price": 110,
       "order": 0,
-      "size": [
-        44,
-        43,
-        40
-      ],
-      "color": [
-        "red",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 43, 40],
+      "color": ["red", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/3.webp",
       "popular": false
@@ -96,17 +69,8 @@
       "title": "adidas",
       "price": 223,
       "order": 0,
-      "size": [
-        44,
-        42,
-        39
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 39],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/4.webp",
       "popular": true
@@ -116,17 +80,8 @@
       "title": "adidas",
       "price": 75,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/5.webp",
       "popular": false
@@ -136,17 +91,8 @@
       "title": "adidas",
       "price": 45,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/6.webp",
       "popular": false
@@ -156,17 +102,8 @@
       "title": "adidas",
       "price": 83,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/7.webp",
       "popular": false
@@ -176,17 +113,8 @@
       "title": "adidas",
       "price": 98,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/8.webp",
       "popular": false
@@ -196,17 +124,8 @@
       "title": "asics",
       "price": 56,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/1.webp",
       "popular": false
@@ -216,17 +135,8 @@
       "title": "asics",
       "price": 142,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/2.webp",
       "popular": true
@@ -236,17 +146,8 @@
       "title": "asics",
       "price": 238,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/3.webp",
       "popular": true
@@ -256,17 +157,8 @@
       "title": "asics",
       "price": 165,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/4.webp",
       "popular": false
@@ -276,17 +168,8 @@
       "title": "asics",
       "price": 153,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/5.webp",
       "popular": true
@@ -296,17 +179,8 @@
       "title": "asics",
       "price": 100,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/6.webp",
       "popular": false
@@ -316,17 +190,8 @@
       "title": "asics",
       "price": 200,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/7.webp",
       "popular": false
@@ -336,17 +201,8 @@
       "title": "asics",
       "price": 105,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/8.webp",
       "popular": true
@@ -356,17 +212,8 @@
       "title": "converse",
       "price": 195,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/1.jpg",
       "popular": false
@@ -376,17 +223,8 @@
       "title": "converse",
       "price": 160,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/2.jpg",
       "popular": false
@@ -396,17 +234,8 @@
       "title": "converse",
       "price": 210,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/3.jpg",
       "popular": false
@@ -416,17 +245,8 @@
       "title": "converse",
       "price": 225,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/4.jpg",
       "popular": false
@@ -436,17 +256,8 @@
       "title": "converse",
       "price": 230,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/5.jpg",
       "popular": false
@@ -456,17 +267,8 @@
       "title": "converse",
       "price": 95,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/6.jpg",
       "popular": false
@@ -476,17 +278,8 @@
       "title": "converse",
       "price": 180,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/7.jpg",
       "popular": false
@@ -496,17 +289,8 @@
       "title": "converse",
       "price": 150,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/8.jpg",
       "popular": true
@@ -516,17 +300,8 @@
       "title": "newbalance",
       "price": 165,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/1.webp",
       "popular": false
@@ -536,17 +311,8 @@
       "title": "newbalance",
       "price": 45,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/2.webp",
       "popular": true
@@ -556,17 +322,8 @@
       "title": "newbalance",
       "price": 125,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/3.webp",
       "popular": false
@@ -576,17 +333,8 @@
       "title": "newbalance",
       "price": 210,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/4.webp",
       "popular": true
@@ -596,17 +344,8 @@
       "title": "newbalance",
       "price": 70,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/5.webp",
       "popular": false
@@ -616,17 +355,9 @@
       "title": "newbalance",
       "price": 164,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "brand": "newbalance",
+      "color": ["rose", "emerald", "teal", "gray"],
       "images": "http://localhost:5173/products/newbalance/6.webp",
       "popular": false
     },
@@ -635,17 +366,8 @@
       "title": "newbalance",
       "price": 215,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/7.webp",
       "popular": false
@@ -655,17 +377,8 @@
       "title": "newbalance",
       "price": 130,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/8.webp",
       "popular": false
@@ -675,17 +388,8 @@
       "title": "nike",
       "price": 110,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/1.webp",
       "popular": false
@@ -695,17 +399,8 @@
       "title": "nike",
       "price": 99,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/2.webp",
       "popular": false
@@ -715,17 +410,8 @@
       "title": "nike",
       "price": 135,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/3.webp",
       "popular": false
@@ -735,17 +421,8 @@
       "title": "nike",
       "price": 105,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/4.webp",
       "popular": false
@@ -755,17 +432,8 @@
       "title": "nike",
       "price": 200,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/5.webp",
       "popular": false
@@ -775,17 +443,8 @@
       "title": "nike",
       "price": 310,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/6.webp",
       "popular": false
@@ -795,17 +454,8 @@
       "title": "nike",
       "price": 260,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/7.webp",
       "popular": false
@@ -815,17 +465,8 @@
       "title": "nike",
       "price": 180,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/8.webp",
       "popular": false
@@ -835,17 +476,8 @@
       "title": "puma",
       "price": 335,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/1.webp",
       "popular": false
@@ -855,17 +487,8 @@
       "title": "puma",
       "price": 450,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/2.webp",
       "popular": false
@@ -875,17 +498,8 @@
       "title": "puma",
       "price": 370,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/3.webp",
       "popular": false
@@ -895,17 +509,8 @@
       "title": "puma",
       "price": 310,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/4.webp",
       "popular": false
@@ -915,17 +520,8 @@
       "title": "puma",
       "price": 399,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/5.webp",
       "popular": false
@@ -935,17 +531,8 @@
       "title": "puma",
       "price": 299,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/6.webp",
       "popular": false
@@ -955,17 +542,8 @@
       "title": "puma",
       "price": 420,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/7.webp",
       "popular": false
@@ -975,17 +553,8 @@
       "title": "puma",
       "price": 435,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/8.webp",
       "popular": false
@@ -995,17 +564,8 @@
       "title": "reebok",
       "price": 95,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/1.webp",
       "popular": false
@@ -1015,17 +575,8 @@
       "title": "reebok",
       "price": 125,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/2.webp",
       "popular": false
@@ -1035,17 +586,8 @@
       "title": "reebok",
       "price": 115,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/3.webp",
       "popular": false
@@ -1055,17 +597,8 @@
       "title": "reebok",
       "price": 345,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/4.webp",
       "popular": false
@@ -1075,17 +608,8 @@
       "title": "reebok",
       "price": 360,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/5.webp",
       "popular": false
@@ -1095,17 +619,8 @@
       "title": "reebok",
       "price": 410,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/6.webp",
       "popular": false
@@ -1115,17 +630,8 @@
       "title": "reebok",
       "price": 399,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/7.webp",
       "popular": false
@@ -1135,17 +641,8 @@
       "title": "reebok",
       "price": 330,
       "order": 0,
-      "size": [
-        44,
-        42,
-        40
-      ],
-      "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
-      ],
+      "size": [44, 42, 40],
+      "color": ["rose", "emerald", "teal", "gray"],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/8.webp",
       "popular": false

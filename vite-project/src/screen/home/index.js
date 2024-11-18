@@ -5,6 +5,7 @@ import { svgs } from "../../svgs";
 import { renderProduct } from "../../utils/render";
 import { mostPopular } from "./popular";
 import { categories } from "./list";
+import { brandFilter, filterHeader } from "./brandFilter";
 
 export const header = function () {
   return El({
@@ -62,7 +63,7 @@ const search = () => {
   return El({
     element: "div",
     className:
-      "flex items-center px-4 py-2 bg-gray-100 shadow-sm w-96 ml-4 mt-2 max-w-sm",
+      "flex items-center px-4 py-2 bg-gray-100 shadow-sm w-[400px] ml-10 mt-2 max-w-sm",
     children: [
       El({
         element: "span",
@@ -78,57 +79,12 @@ const search = () => {
     ],
   });
 };
-const brands = [
-  { logo: "/images/nike.png", name: "Nike" },
-  { logo: "/images/adidas.png", name: "Adidas" },
-  { logo: "/images/puma.png", name: "Puma" },
-  { logo: "/images/asics.png", name: "Asics" },
-  { logo: "/images/reebok.png", name: "Reebok" },
-  { logo: "/images/newb.png", name: "New Balance" },
-  { logo: "/images/convers.png", name: "Converse" },
-  { logo: "/images/more.png", name: "More .." },
-];
-
-const brandFilter = function () {
-  return El({
-    element: "div",
-    className: "grid grid-cols-4 gap-4 p-4 bg-white",
-    children: brands.map((brand) =>
-      El({
-        element: "div",
-        className: "flex flex-col items-center",
-        children: [
-          El({
-            element: "div",
-            className:
-              "w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full",
-            children: [
-              El({
-                element: "img",
-                className: "w-8 h-8 object-contain",
-                restAttrs: {
-                  src: brand.logo,
-                  alt: `${brand.name} Logo`,
-                },
-              }),
-            ],
-          }),
-
-          El({
-            element: "span",
-            className: "text-[14px] font-bold text-gray-700 mt-2 text-center",
-            textContent: brand.name,
-          }),
-        ],
-      })
-    ),
-  });
-};
 
 export const allProduct = (data) => {
-  return El({
+  const allProducts = El({
     element: "div",
-    className: "flex justify-center items-center flex-wrap gap-4 pb-24",
+    className:
+      "flex justify-between items-center flex-wrap gap-4 p-[24px] pb-24",
     children: data.map((product) => {
       return El({
         element: "div",
@@ -153,16 +109,18 @@ export const allProduct = (data) => {
       });
     }),
   });
+  return allProducts;
 };
 
 export const home = async () => {
   return El({
     element: "div",
-    className: "flex-1",
+    className: "flex-1 justify-center items-center",
     children: [
       header(),
       search(),
       brandFilter(),
+
       mostPopular(),
       categories(),
       await renderProduct(),
