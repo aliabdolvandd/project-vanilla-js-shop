@@ -35,7 +35,7 @@ function createPage(pageData) {
     children: [
       El({
         element: "img",
-        className: " shadow-lg h-full w-full",
+        className: " shadow-lg h-[550px] w-full",
         src: imageSrc,
         alt: altText,
       }),

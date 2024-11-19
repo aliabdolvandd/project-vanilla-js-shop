@@ -4,7 +4,12 @@ import { home } from "../screen/home";
 import { products } from "../screen/products";
 import { login } from "../layout/login";
 import { loading, loadingPage } from "../layout/onboarding/loading";
-import { render, renderDetaile, renderProductFilter } from "../utils/render";
+import {
+  render,
+  renderDetaile,
+  renderProductFilter,
+  renderWishList,
+} from "../utils/render";
 import { cart } from "../screen/cart";
 import { filterHeader } from "../screen/home/brandFilter";
 import { detail } from "../screen/detailePage";
@@ -21,6 +26,10 @@ export const app = () => {
     .on(
       "/product/:id",
       async (params) => await layout(() => renderDetaile(params))
+    )
+    .on(
+      "/wishlist",
+      async (params) => await layout(() => renderWishList(params))
     )
     // .on("/products", () => layout(products()))
     .on("/login", (params) => login(params))

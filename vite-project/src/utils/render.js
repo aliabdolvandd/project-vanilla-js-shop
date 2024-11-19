@@ -1,8 +1,12 @@
 import { getData } from "../api/getApi";
+import { patchRequest } from "../api/patch";
+import { postRequest } from "../api/post";
 import { root } from "../router/index.routes";
 import { detail } from "../screen/detailePage";
 import { allProduct } from "../screen/home";
 import { filterHeader } from "../screen/home/brandFilter";
+import { wishList } from "../screen/wishList";
+
 import { El } from "../script";
 
 export const render = function (...children) {
@@ -36,8 +40,14 @@ export const renderProductFilter = async (params) => {
 };
 
 export const renderDetaile = async (params) => {
-  // cpnsole.log(params);
   const data = await getData(`/Products/${params.data.id}`);
-  console.log(params);
+  // console.log(params);
   return detail(data);
+};
+
+export const renderWishList = async () => {
+  const data = await getData("/users/" + getStorage("user")).id;
+  // const products = data.wishList;
+  // console.log(products);
+  return wishList(data);
 };

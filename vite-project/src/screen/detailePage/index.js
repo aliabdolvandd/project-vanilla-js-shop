@@ -1,9 +1,12 @@
+import { patchRequest } from "../../api/patch";
+import { postRequest } from "../../api/post";
 import { router } from "../../router/index.routes";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
+import { getStorage, renderWishList, setStorage } from "../../utils/render";
 
 export const detail = function (product) {
-  console.log(product);
+  //   console.log(product);
 
   return El({
     element: "div",
@@ -44,6 +47,27 @@ export const detail = function (product) {
           El({
             element: "span",
             innerHTML: svgs.Like,
+            eventListener: [
+              {
+                event: "click",
+                callback: async () => {
+                  try {
+                    patchRequest(`/users/` + getStorage("user").id, {
+                      wishlist: [...getStorage("user").wishlist, product],
+                    });
+                    setStorage("user", {
+                      ...getStorage("user"),
+                      wishlist: [...getStorage("user").wishlist, product],
+                    });
+                  } catch (err) {
+                    console.log(err);
+                  }
+                  //   getStorage("user").
+                  //   const result = await postjson();Request("/users/wishlist", product);
+                  //     console.log(result);
+                },
+              },
+            ],
           }),
         ],
       }),

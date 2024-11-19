@@ -1,7 +1,7 @@
 import { El } from "../../script";
 import { renderProduct } from "../../utils/render";
 
-const categoriesList = [
+export const categoriesList = [
   { name: "all" },
   { name: "nike" },
   { name: "adidas" },

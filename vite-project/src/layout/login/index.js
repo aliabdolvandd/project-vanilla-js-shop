@@ -1,8 +1,9 @@
 import { El } from "../../script";
 import { svgs } from "../../svgs";
-import { render } from "../../utils/render";
+import { render, setStorage } from "../../utils/render";
 import { validateEmail, validatePassword } from "./validateE";
 import { postRequest } from "../../api/post";
+import { router } from "../../router/index.routes";
 
 const formContainer = El({
   element: "div",
@@ -127,12 +128,17 @@ form.addEventListener("submit", async (e) => {
   }
 
   try {
-    const result = await postRequest("/users", { email, password });
-    console.log("Login successful:", result);
-
-    router.navigate("");
+    const result = await postRequest("/users", {
+      email,
+      password,
+      cart: [],
+      orders: [],
+      wishlist: [],
+    });
+    setStorage("user", result);
+    router.navigate("/");
   } catch (error) {
-    alert("Invalid email or password.");
+    console.log(error);
   }
 });
 

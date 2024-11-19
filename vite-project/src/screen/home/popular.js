@@ -26,5 +26,3 @@ export const mostPopular = () => {
     ],
   });
 };
-
-const seeAll = function () {};

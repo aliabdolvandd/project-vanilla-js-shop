@@ -8,7 +8,9 @@ import { categories } from "./list";
 import { brandFilter, filterHeader } from "./brandFilter";
 import { router } from "../../router/index.routes";
 
-export const header = function () {
+// const isWishList = false;
+
+export const header = function (data) {
   return El({
     element: "div",
     className: "flex items-center justify-between px-4 py-2",
@@ -48,6 +50,12 @@ export const header = function () {
             element: "span",
             className: "w-full h-full",
             innerHTML: svgs.Like,
+            eventListener: [
+              {
+                event: "click",
+                callback: () => router.navigate("/wishlist"),
+              },
+            ],
           }),
           El({
             element: "span",
