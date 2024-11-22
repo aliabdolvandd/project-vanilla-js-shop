@@ -7,6 +7,7 @@ import { mostPopular } from "./popular";
 import { categories } from "./list";
 import { brandFilter, filterHeader } from "./brandFilter";
 import { router } from "../../router/index.routes";
+import { wishList } from "../wishList";
 
 // const isWishList = false;
 
@@ -53,7 +54,7 @@ export const header = function (data) {
             eventListener: [
               {
                 event: "click",
-                callback: () => router.navigate("/wishlist"),
+                callback: () => router.navigate(`/wishlist`),
               },
             ],
           }),

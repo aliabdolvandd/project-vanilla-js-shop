@@ -11,8 +11,8 @@ import {
   renderWishList,
 } from "../utils/render";
 import { cart } from "../screen/cart";
-import { filterHeader } from "../screen/home/brandFilter";
-import { detail } from "../screen/detailePage";
+// import { filterHeader } from "../screen/home/brandFilter";
+// import { detail } from "../screen/detailePage";
 
 export const root = document.getElementById("app");
 export const router = new Navigo("/");

@@ -46,19 +46,41 @@ export const detail = function (product) {
           }),
           El({
             element: "span",
-            innerHTML: svgs.Like,
+            innerHTML: getStorage("user").wishlist.some(
+              (item) => item.id === product.id
+            )
+              ? svgs.likeFill
+              : svgs.Like,
             eventListener: [
               {
                 event: "click",
-                callback: async () => {
+                callback: async (event) => {
                   try {
-                    patchRequest(`/users/` + getStorage("user").id, {
-                      wishlist: [...getStorage("user").wishlist, product],
-                    });
-                    setStorage("user", {
-                      ...getStorage("user"),
-                      wishlist: [...getStorage("user").wishlist, product],
-                    });
+                    const user = getStorage("user");
+                    const wishlist = user.wishlist || [];
+                    const productIndex = wishlist.findIndex(
+                      (item) => item.id === product.id
+                    );
+
+                    if (productIndex > -1) {
+                      wishlist.splice(productIndex, 1);
+                      await patchRequest(`/users/${user.id}`, { wishlist });
+                      setStorage("user", { ...user, wishlist });
+
+                      event.target.innerHTML = svgs.Like;
+                    } else {
+                      wishlist.push(product);
+                      await patchRequest(`/users/${user.id}`, { wishlist });
+                      setStorage("user", { ...user, wishlist });
+                      event.target.innerHTML = svgs.likeFill;
+                    }
+                    // patchRequest(`/users/` + getStorage("user").id, {
+                    //   wishlist: [...getStorage("user").wishlist, product],
+                    // });
+                    // setStorage("user", {
+                    //   ...getStorage("user"),
+                    //   wishlist: [...getStorage("user").wishlist, product],
+                    // });
                   } catch (err) {
                     console.log(err);
                   }

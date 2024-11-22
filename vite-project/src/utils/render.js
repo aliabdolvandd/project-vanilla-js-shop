@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import { getData } from "../api/getApi";
 import { patchRequest } from "../api/patch";
 import { postRequest } from "../api/post";
@@ -5,9 +6,10 @@ import { root } from "../router/index.routes";
 import { detail } from "../screen/detailePage";
 import { allProduct } from "../screen/home";
 import { filterHeader } from "../screen/home/brandFilter";
-import { wishList } from "../screen/wishList";
+// import { wishList } from "../screen/wishList";
 
 import { El } from "../script";
+import { wishList } from "../screen/wishList";
 
 export const render = function (...children) {
   root.innerHTML = "";
@@ -46,8 +48,17 @@ export const renderDetaile = async (params) => {
 };
 
 export const renderWishList = async () => {
-  const data = await getData("/users/" + getStorage("user")).id;
-  // const products = data.wishList;
+  const data = await getData("/users/" + getStorage("user").id);
+  const wishProducts = data.wishlist;
   // console.log(products);
-  return wishList(data);
+  const pageWislList = El({
+    element: "div",
+    children: [wishList(), allProduct(wishProducts)],
+  });
+  return pageWislList;
 };
+// export const renderProductWish = async () => {
+//   const productWish = await getData(`/users/${data.wishlist}`);
+//   console.log(productWish);
+//   return allProduct(productWish);
+// };

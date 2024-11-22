@@ -10,29 +10,38 @@ const categories = [
 export const wishHeader = () => {
   return El({
     element: "div",
-    className: "flex justify-between items-center px-4 py-2 bg-white shadow",
+    className: "flex justify-between items-center px-4 py-2 ",
     children: [
       El({
-        element: "input",
-        className: "flex-1 px-4 py-2 rounded-full border border-gray-300",
-        restAttrs: {
-          type: "text",
-          placeholder: "Search",
-        },
+        element: "span",
+        className: "",
+        innerHTML: svgs.Back,
+        eventListener: [
+          {
+            event: "click",
+            callback: () => history.back(),
+          },
+        ],
+      }),
+      El({
+        element: "h2",
+        className: "flex-1 px-4 py-2 font-bold text-2xl relative",
+        textContent: "My Wishlist",
       }),
 
       El({
         element: "div",
-        className: "flex items-center gap-4",
+        className: "flex items-center gap-4 absolute right-6 -translate-y-1",
         children: [
           El({
-            element: "button",
-            innerHTML: svgs.Grid,
+            element: "span",
+            className: "",
+            innerHTML: svgs.search,
           }),
-          El({
-            element: "button",
-            innerHTML: svgs.More,
-          }),
+          // El({
+          //   element: "button",
+          //   innerHTML: svgs.More,
+          // }),
         ],
       }),
     ],
@@ -59,66 +68,6 @@ const wishCategories = () => {
               console.log(`Selected category: ${category.name}`);
             },
           },
-        ],
-      })
-    ),
-  });
-};
-
-const wishProduct = (products) => {
-  return El({
-    element: "div",
-    className: "grid grid-cols-2 gap-4 p-4 bg-white",
-    children: products.map((product) =>
-      El({
-        element: "div",
-        className:
-          "relative flex flex-col items-center bg-white p-4 rounded-lg shadow-sm",
-        children: [
-          El({
-            element: "button",
-            className:
-              "absolute top-2 right-2 bg-white rounded-full p-2 shadow",
-            innerHTML: svgs.Heart,
-          }),
-
-          El({
-            element: "img",
-            className: "w-full h-40 object-contain mb-2",
-            restAttrs: {
-              src: product.image,
-              alt: product.title,
-            },
-          }),
-
-          El({
-            element: "h3",
-            className: "text-lg font-semibold text-gray-800",
-            textContent: product.title,
-          }),
-
-          El({
-            element: "div",
-            className: "flex justify-between items-center w-full mt-2",
-            children: [
-              El({
-                element: "span",
-                className: "flex items-center text-sm text-gray-600",
-                innerHTML: `${svgs.Star} ${product.rating}`,
-              }),
-              El({
-                element: "span",
-                className: "text-sm text-gray-600",
-                textContent: `${product.sold} sold`,
-              }),
-            ],
-          }),
-
-          El({
-            element: "span",
-            className: "text-lg font-bold text-gray-800 mt-2",
-            textContent: `$${product.price}`,
-          }),
         ],
       })
     ),
