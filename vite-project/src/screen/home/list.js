@@ -30,12 +30,12 @@ export const categories = () => {
       hover:bg-gray-800 hover:text-white transition
     `,
         textContent: category.name,
-        // eventListener: [
-        //   {
-        //     event: "click",
-        //     callback: renderProduct(),
-        //   },
-        // ],
+        eventListener: [
+          {
+            event: "click",
+            callback: renderProduct(),
+          },
+        ],
       });
     }),
   });

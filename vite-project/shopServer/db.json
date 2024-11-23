@@ -10,113 +10,13 @@
       "wishlist": []
     },
     {
-      "id": "2a07",
-      "email": "aliabd2@gmail.com",
+      "id": "a829",
+      "email": "aliabdolvand@gmail.com",
       "password": "123456",
       "cart": [],
       "orders": [],
       "wishlist": [
         {
-          "id": "1",
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/1.webp",
-          "popular": true
-        },
-        {
-          "id": "1",
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/1.webp",
-          "popular": true
-        },
-        {
-          "id": "1",
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/1.webp",
-          "popular": true
-        },
-        {
-          "id": "1",
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/1.webp",
-          "popular": true
-        },
-        {
-          "id": "1",
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/1.webp",
-          "popular": true
-        },
-        {
           "id": "2",
           "title": "adidas",
           "price": 145,
@@ -137,9 +37,9 @@
           "popular": false
         },
         {
-          "id": "2",
-          "title": "adidas",
-          "price": 145,
+          "id": "41",
+          "title": "puma",
+          "price": 335,
           "order": 0,
           "size": [
             44,
@@ -152,59 +52,11 @@
             "teal",
             "gray"
           ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/2.webp",
-          "popular": false
-        },
-        {
-          "id": "2",
-          "title": "adidas",
-          "price": 145,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/2.webp",
-          "popular": false
-        },
-        {
-          "id": "9",
-          "title": "asics",
-          "price": 56,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "asics",
-          "images": "http://localhost:5173/products/asics/1.webp",
+          "brand": "puma",
+          "images": "http://localhost:5173/products/puma/1.webp",
           "popular": false
         }
       ]
-    },
-    {
-      "id": "ce27",
-      "email": "aliab@gmail.com",
-      "password": "123456",
-      "cart": [],
-      "orders": [],
-      "wishlist": []
     }
   ],
   "Products": [
