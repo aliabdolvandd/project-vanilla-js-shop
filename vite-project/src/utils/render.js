@@ -5,11 +5,12 @@ import { postRequest } from "../api/post";
 import { root } from "../router/index.routes";
 import { detail } from "../screen/detailePage";
 import { allProduct } from "../screen/home";
-import { filterHeader } from "../screen/home/brandFilter";
+import { brands, filterHeader } from "../screen/home/brandFilter";
 // import { wishList } from "../screen/wishList";
 
 import { El } from "../script";
 import { wishList } from "../screen/wishList";
+import { categories } from "../screen/home/list";
 
 export const render = function (...children) {
   root.innerHTML = "";
@@ -62,3 +63,17 @@ export const renderWishList = async () => {
 //   console.log(productWish);
 //   return allProduct(productWish);
 // };
+export const renderCategoryItems = async (brand = "all") => {
+  // const brand = params.brand;
+
+  const data =
+    brand === "all"
+      ? await getData(`/Products`)
+      : await getData(`/Products?brand=${brand}`);
+  const categoryContainer = El({
+    element: "div",
+    children: [allProduct(data)],
+  });
+  console.log(data);
+  return categoryContainer;
+};

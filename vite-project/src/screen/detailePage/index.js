@@ -46,11 +46,6 @@ export const detail = function (product) {
           }),
           El({
             element: "span",
-            innerHTML: getStorage("user").wishlist.some(
-              (item) => item.id === product.id
-            )
-              ? svgs.likeFill
-              : svgs.Like,
             eventListener: [
               {
                 event: "click",
@@ -67,12 +62,15 @@ export const detail = function (product) {
                       await patchRequest(`/users/${user.id}`, { wishlist });
                       setStorage("user", { ...user, wishlist });
 
-                      event.target.innerHTML = svgs.Like;
+                      const targetSpan = event.target.closest("span");
+                      targetSpan.innerHTML = svgs.Like;
                     } else {
                       wishlist.push(product);
                       await patchRequest(`/users/${user.id}`, { wishlist });
+
                       setStorage("user", { ...user, wishlist });
-                      event.target.innerHTML = svgs.likeFill;
+                      const targetSpan = event.target.closest("span");
+                      targetSpan.innerHTML = svgs.likeFill;
                     }
                     // patchRequest(`/users/` + getStorage("user").id, {
                     //   wishlist: [...getStorage("user").wishlist, product],
@@ -90,6 +88,11 @@ export const detail = function (product) {
                 },
               },
             ],
+            innerHTML: getStorage("user").wishlist.some(
+              (item) => item.id === product.id
+            )
+              ? svgs.likeFill
+              : svgs.Like,
           }),
         ],
       }),

@@ -1,6 +1,11 @@
+import { data } from "autoprefixer";
+import { router } from "../../router/index.routes";
 import { El } from "../../script";
-import { renderProduct } from "../../utils/render";
+import { renderCategoryItems } from "../../utils/render";
+// import { renderCategori, renderProduct } from "../../utils/render";
 
+// let buttonAll = "all";
+let selectedCategory = "all";
 export const categoriesList = [
   { name: "all" },
   { name: "nike" },
@@ -11,7 +16,6 @@ export const categoriesList = [
   { name: "newbalance" },
   { name: "reebok" },
 ];
-let buttonAll = "all";
 
 export const categories = () => {
   return El({
@@ -20,10 +24,10 @@ export const categories = () => {
     children: categoriesList.map((category) => {
       return El({
         element: "button",
-        className: ` flex items-center justify-center
+        className: `capitalize flex items-center justify-center
       px-4 py-2 text-sm font-medium border rounded-full 
        ${
-         buttonAll === category.name
+         selectedCategory === category.name
            ? "bg-gray-800 text-white"
            : "text-gray-700 border-gray-300"
        }
@@ -33,7 +37,16 @@ export const categories = () => {
         eventListener: [
           {
             event: "click",
-            callback: renderProduct(),
+
+            callback: async () => {
+              selectedCategory = category.name;
+              // await renderCategori(selectedCategory);
+              const productListElm = document.getElementById("productList");
+              productListElm.innerHTML = "";
+              productListElm.append(
+                await renderCategoryItems(selectedCategory)
+              );
+            },
           },
         ],
       });

@@ -31,6 +31,7 @@ export const app = () => {
       "/wishlist",
       async (params) => await layout(() => renderWishList(params))
     )
+    // .on("/", async (params) => await layout(() => renderCategori(params)))
     // .on("/products", () => layout(products()))
     .on("/login", (params) => login(params))
     .on("/onboarding", (params) => loadingPage(params))
