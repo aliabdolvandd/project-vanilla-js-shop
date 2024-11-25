@@ -11,7 +11,7 @@ import { brands, filterHeader } from "../screen/home/brandFilter";
 import { El } from "../script";
 import { wishList } from "../screen/wishList";
 import { categories } from "../screen/home/list";
-
+import { cartPage } from "../screen/cart";
 export const render = function (...children) {
   root.innerHTML = "";
 
@@ -74,6 +74,13 @@ export const renderCategoryItems = async (brand = "all") => {
     element: "div",
     children: [allProduct(data)],
   });
-  console.log(data);
+  // console.log(data);
   return categoryContainer;
+};
+export const renderCartPage = async () => {
+  const data = await getData("/users/" + getStorage("user").id);
+  const cartProduct = data.cart || [];
+  // console.log(cartProduct);
+
+  return cartPage(cartProduct);
 };

@@ -13,7 +13,31 @@
       "id": "a829",
       "email": "aliabdolvand@gmail.com",
       "password": "123456",
-      "cart": [],
+      "cart": [
+        {
+          "id": "5",
+          "title": "adidas",
+          "price": 75,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/5.webp",
+          "popular": false,
+          "quantity": 2,
+          "selectedSize": 42,
+          "selectedColor": "teal"
+        }
+      ],
       "orders": [],
       "wishlist": [
         {

@@ -3,10 +3,55 @@ import { postRequest } from "../../api/post";
 import { router } from "../../router/index.routes";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
+import { getData } from "../../api/getApi";
 import { getStorage, renderWishList, setStorage } from "../../utils/render";
+
+// const addToCart = async (product) => {
+//   const userId = getStorage("user").id;
+//   const userData = await getData(`/users/${userId}`);
+//   const cart = userData.cart || [];
+//   const productIndex = cart.findIndex((item) => item.id === product.id);
+
+//   if (productIndex > -1) {
+//     cart[productIndex].quantity += 1;
+//   } else {
+//     cart.push({ ...product, quantity: 1 });
+//   }
+
+//   await patchRequest(`/users/${userId}`, { cart });
+
+//   setStorage("user", { ...userData, cart });
+
+//   console.log(cart);
+// };
 
 export const detail = function (product) {
   //   console.log(product);
+  let quantity = 1;
+  let selectedColor = [];
+  let selectedSize = [];
+  const updateQuantity = (newQty) => {
+    quantity = newQty;
+    qtyElement.textContent = quantity;
+    updateTotalPrice();
+  };
+
+  const updateTotalPrice = () => {
+    const totalPrice = quantity * product.price;
+    totalPriceElement.textContent = `$${totalPrice}`;
+  };
+  const qtyElement = El({
+    element: "span",
+    id: "quantity",
+    className: "text-lg",
+    innerText: quantity,
+  });
+
+  const totalPriceElement = El({
+    element: "span",
+    className: "text-lg font-bold text-gray-800",
+    textContent: `$${product.price}`,
+  });
 
   return El({
     element: "div",
@@ -145,6 +190,16 @@ export const detail = function (product) {
                       element: "div",
                       className: `flex justify-center items-center w-6 h-6 rounded-full shadow  shadow-gray`,
                       innerText: item,
+                      eventListener: [
+                        {
+                          event: "click",
+                          callback: (e) => (selectedSize = item),
+                          if(selectedSize) {
+                            // const targetSpan = e.target.closest("span");
+                            e.classList.add("bg-black");
+                          },
+                        },
+                      ],
                     });
                   }),
                 ],
@@ -163,9 +218,12 @@ export const detail = function (product) {
                     return El({
                       element: "div",
                       className: `w-6 h-6 rounded-full ring ring-[1px]`,
-                      style: {
-                        backgroundColor: item,
-                      },
+                      eventListener: [
+                        {
+                          event: "click",
+                          callback: (e) => (selectedColor = item),
+                        },
+                      ],
                       //   innerText: `${item}`,
                     });
                   }),
@@ -191,21 +249,13 @@ export const detail = function (product) {
                       {
                         event: "click",
                         callback: () => {
-                          const qtyElement =
-                            document.getElementById("quantity");
-                          let qty = parseInt(qtyElement.textContent, 10);
-                          if (qty > 1) qtyElement.textContent = qty - 1;
+                          if (quantity > 1) updateQuantity(quantity - 1);
                         },
                       },
                     ],
                   }),
+                  qtyElement,
 
-                  El({
-                    element: "span",
-                    id: "quantity",
-                    className: "text-lg",
-                    innerText: "1",
-                  }),
                   El({
                     element: "button",
                     className: "text-lg",
@@ -214,10 +264,7 @@ export const detail = function (product) {
                       {
                         event: "click",
                         callback: () => {
-                          const qtyElement =
-                            document.getElementById("quantity");
-                          let qty = parseInt(qtyElement.textContent, 10);
-                          qtyElement.textContent = qty + 1;
+                          updateQuantity(quantity + 1);
                         },
                       },
                     ],
@@ -239,11 +286,7 @@ export const detail = function (product) {
                     className: "font-bold text-sm text-gray-400",
                     innerText: "Total Price",
                   }),
-                  El({
-                    element: "span",
-                    className: "text-lg font-bold text-gray-800",
-                    textContent: `$${product.price}`,
-                  }),
+                  totalPriceElement,
                 ],
               }),
               El({
@@ -254,8 +297,30 @@ export const detail = function (product) {
                 eventListener: [
                   {
                     event: "click",
-                    callback: () => {
-                      console.log(`${product.title} added to cart`);
+                    callback: async () => {
+                      const userId = getStorage("user").id;
+                      const userData = await getData(`/users/${userId}`);
+                      const cart = userData.cart || [];
+                      const productIndex = cart.findIndex(
+                        (item) => item.id === product.id
+                      );
+
+                      if (productIndex > -1) {
+                        cart[productIndex].quantity += 1;
+                      } else {
+                        cart.push({
+                          ...product,
+                          quantity,
+                          selectedSize,
+                          selectedColor,
+                        });
+                      }
+
+                      await patchRequest(`/users/${userId}`, { cart });
+
+                      setStorage("user", { ...userData, cart });
+
+                      // console.log(cart);
                     },
                   },
                 ],
