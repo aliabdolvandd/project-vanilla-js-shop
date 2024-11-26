@@ -8,10 +8,12 @@ import {
   render,
   renderCartPage,
   renderDetaile,
+  renderPopular,
   renderProductFilter,
   renderWishList,
 } from "../utils/render";
 import { cartPage } from "../screen/cart";
+import { showPopular } from "../screen/home/popular";
 // import { filterHeader } from "../screen/home/brandFilter";
 // import { detail } from "../screen/detailePage";
 
@@ -32,8 +34,7 @@ export const app = () => {
       "/wishlist",
       async (params) => await layout(() => renderWishList(params))
     )
-    // .on("/", async (params) => await layout(() => renderCategori(params)))
-    // .on("/products", () => layout(products()))
+    .on("/popular", async () => await layout(() => renderPopular()))
     .on("/login", (params) => login(params))
     .on("/onboarding", (params) => loadingPage(params))
     .on("/cart", async (params) => await layout(renderCartPage))
