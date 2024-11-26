@@ -81,6 +81,125 @@
           "popular": false
         }
       ]
+    },
+    {
+      "id": "24ce",
+      "email": "ali@gmail.com",
+      "password": "111111",
+      "cart": [
+        {
+          "id": "2",
+          "title": "adidas",
+          "price": 145,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/2.webp",
+          "popular": false,
+          "quantity": 1,
+          "selectedSize": [],
+          "selectedColor": []
+        }
+      ],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "842c",
+      "email": "ali@gmail.com",
+      "password": "111111",
+      "cart": [
+        {
+          "id": "2",
+          "title": "adidas",
+          "price": 145,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/2.webp",
+          "popular": false,
+          "quantity": 4,
+          "selectedSize": [],
+          "selectedColor": []
+        }
+      ],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "ad82",
+      "email": "ali@gmail.com",
+      "password": "111111",
+      "cart": [
+        {
+          "id": "2",
+          "title": "adidas",
+          "price": 145,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/2.webp",
+          "popular": false,
+          "quantity": 3,
+          "selectedSize": [],
+          "selectedColor": []
+        },
+        {
+          "id": "5",
+          "title": "adidas",
+          "price": 75,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/5.webp",
+          "popular": false,
+          "quantity": 3,
+          "selectedSize": 44,
+          "selectedColor": "rose"
+        }
+      ],
+      "orders": [],
+      "wishlist": []
     }
   ],
   "Products": [

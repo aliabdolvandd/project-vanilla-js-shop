@@ -6,25 +6,16 @@ import { svgs } from "../../svgs";
 import { getData } from "../../api/getApi";
 import { getStorage, renderWishList, setStorage } from "../../utils/render";
 
-// const addToCart = async (product) => {
-//   const userId = getStorage("user").id;
-//   const userData = await getData(`/users/${userId}`);
-//   const cart = userData.cart || [];
-//   const productIndex = cart.findIndex((item) => item.id === product.id);
+function generateColor(color) {
+  switch (color) {
+    case "rose":
+      return "bg-rose-400";
+      break;
 
-//   if (productIndex > -1) {
-//     cart[productIndex].quantity += 1;
-//   } else {
-//     cart.push({ ...product, quantity: 1 });
-//   }
-
-//   await patchRequest(`/users/${userId}`, { cart });
-
-//   setStorage("user", { ...userData, cart });
-
-//   console.log(cart);
-// };
-
+    default:
+      break;
+  }
+}
 export const detail = function (product) {
   //   console.log(product);
   let quantity = 1;
@@ -217,7 +208,9 @@ export const detail = function (product) {
                   ...product.color.map((item) => {
                     return El({
                       element: "div",
-                      className: `w-6 h-6 rounded-full ring ring-[1px]`,
+                      className: `w-6 h-6 rounded-full ring ring-[1px] ${generateColor(
+                        item
+                      )}`,
                       eventListener: [
                         {
                           event: "click",

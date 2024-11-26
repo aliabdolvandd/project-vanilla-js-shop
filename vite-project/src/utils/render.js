@@ -78,7 +78,8 @@ export const renderCategoryItems = async (brand = "all") => {
   return categoryContainer;
 };
 export const renderCartPage = async () => {
-  const data = await getData("/users/" + getStorage("user").id);
+  const data = await getData("/users/" + getStorage("user").id || "");
+
   const cartProduct = data.cart || [];
   // console.log(cartProduct);
 
