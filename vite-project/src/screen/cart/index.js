@@ -1,28 +1,29 @@
 import { El } from "../../script";
-import { getStorage, render } from "../../utils/render";
+import {
+  getStorage,
+  render,
+  renderCartPage,
+  reRender,
+} from "../../utils/render";
 import { getData } from "../../api/getApi";
 import { svgs } from "../../svgs";
 import { patchRequest } from "../../api/patch";
+import { createDeleteModal } from "./removeDialog";
+import { layout } from "../../layout";
 
 let updateQuantity = async function (productId, change) {
   let userData = getStorage("user");
   let cart = userData.cart || [];
-  const qtyElement = document.querySelector(`#quantity-${productId}`);
   let productIndex = cart.findIndex((item) => item.id === productId);
   if (productIndex > -1) {
     cart[productIndex].quantity += change;
-
     if (cart[productIndex].quantity < 1) {
       cart[productIndex].quantity = 1;
     }
-    // quantityElm.innerText = quantity;
-
     userData.cart = cart;
     localStorage.setItem("user", JSON.stringify(userData));
     userData && (await patchRequest(`/users/${userData.id}`, { cart }));
-  }
-  if (qtyElement) {
-    qtyElement.textContent = cart[productIndex].quantity;
+    reRender(await renderCartPage());
   }
 };
 
@@ -34,8 +35,6 @@ let TotalPriceCart = function (items, productPrice) {
   // let totalPrice = productIndex.forEach(() => {});
 };
 export const cartPage = function (cartProduct) {
-  console.log(cartProduct);
-
   return El({
     element: "div",
     className: "flex flex-col h-full bg-gray-50 p-4 gap-4",
@@ -155,6 +154,14 @@ export const cartPage = function (cartProduct) {
                 element: "button",
                 className: "absolute top-2 right-2",
                 innerHTML: svgs.Trash,
+                eventListener: [
+                  {
+                    event: "click",
+                    callback: () => {
+                      createDeleteModal(items);
+                    },
+                  },
+                ],
               }),
             ],
           });

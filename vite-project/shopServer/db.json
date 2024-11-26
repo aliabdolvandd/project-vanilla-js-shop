@@ -152,6 +152,32 @@
       "password": "111111",
       "cart": [
         {
+          "id": "3",
+          "title": "adidas",
+          "price": 110,
+          "order": 0,
+          "size": [
+            44,
+            43,
+            40
+          ],
+          "color": [
+            "red",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/3.webp",
+          "popular": false,
+          "quantity": 1,
+          "selectedSize": [],
+          "selectedColor": []
+        }
+      ],
+      "orders": [],
+      "wishlist": [
+        {
           "id": "2",
           "title": "adidas",
           "price": 145,
@@ -169,15 +195,32 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/products/adidas/2.webp",
-          "popular": false,
-          "quantity": 3,
-          "selectedSize": [],
-          "selectedColor": []
+          "popular": false
         },
         {
-          "id": "5",
+          "id": "4",
           "title": "adidas",
-          "price": 75,
+          "price": 223,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            39
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/4.webp",
+          "popular": true
+        },
+        {
+          "id": "7",
+          "title": "adidas",
+          "price": 83,
           "order": 0,
           "size": [
             44,
@@ -191,15 +234,10 @@
             "gray"
           ],
           "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/5.webp",
-          "popular": false,
-          "quantity": 3,
-          "selectedSize": 44,
-          "selectedColor": "rose"
+          "images": "http://localhost:5173/products/adidas/7.webp",
+          "popular": false
         }
-      ],
-      "orders": [],
-      "wishlist": []
+      ]
     }
   ],
   "Products": [

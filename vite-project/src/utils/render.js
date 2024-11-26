@@ -12,6 +12,7 @@ import { El } from "../script";
 import { wishList } from "../screen/wishList";
 import { categories } from "../screen/home/list";
 import { cartPage } from "../screen/cart";
+import { createFooter } from "../layout/footer";
 export const render = function (...children) {
   root.innerHTML = "";
 
@@ -84,4 +85,14 @@ export const renderCartPage = async () => {
   // console.log(cartProduct);
 
   return cartPage(cartProduct);
+};
+
+export const reRender = function (...children) {
+  root.innerHTML = "";
+  const footerEl = El({
+    element: "footer",
+    className: "fixed bottom-0 left-0 w-full",
+    children: [createFooter()],
+  });
+  root.append(...children, footerEl);
 };
