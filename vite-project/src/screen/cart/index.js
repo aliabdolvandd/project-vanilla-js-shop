@@ -10,6 +10,7 @@ import { svgs } from "../../svgs";
 import { patchRequest } from "../../api/patch";
 import { createDeleteModal } from "./removeDialog";
 import { layout } from "../../layout";
+import { generateColor } from "../detailePage";
 
 let updateQuantity = async function (productId, change) {
   let userData = getStorage("user");
@@ -97,11 +98,15 @@ export const cartPage = function (cartProduct) {
                     children: [
                       El({
                         element: "div",
-                        className: "w-4 h-4 rounded-full ring-1",
+                        className: `w-4 h-4 rounded-full ring-1 ${generateColor(
+                          items.selectedColor
+                        )}`,
                       }),
                       El({
                         element: "span",
-                        className: "text-lg text-gray-400",
+                        className: `text-lg${generateColor(
+                          items.selectedColor
+                        )}`,
                         innerText: `${items.selectedColor} | Size: ${items.selectedSize}`,
                       }),
                     ],
@@ -185,7 +190,7 @@ export const cartPage = function (cartProduct) {
                 element: "span",
                 id: "totalPrice",
                 className: "text-2xl font-bold text-gray-900",
-                innerText: `${TotalPriceCart(cartProduct)}`,
+                innerText: `$${TotalPriceCart(cartProduct)}`,
               }),
             ],
           }),

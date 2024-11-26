@@ -152,27 +152,27 @@
       "password": "111111",
       "cart": [
         {
-          "id": "3",
+          "id": "1",
           "title": "adidas",
-          "price": 110,
+          "price": 245,
           "order": 0,
           "size": [
-            44,
-            43,
+            42,
+            41,
             40
           ],
           "color": [
-            "red",
+            "rose",
             "emerald",
-            "teal",
+            "yellow",
             "gray"
           ],
           "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/3.webp",
-          "popular": false,
-          "quantity": 1,
-          "selectedSize": [],
-          "selectedColor": []
+          "images": "http://localhost:5173/products/adidas/1.webp",
+          "popular": true,
+          "quantity": 2,
+          "selectedSize": 41,
+          "selectedColor": "rose"
         }
       ],
       "orders": [],

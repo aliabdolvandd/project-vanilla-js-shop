@@ -6,12 +6,23 @@ import { svgs } from "../../svgs";
 import { getData } from "../../api/getApi";
 import { getStorage, renderWishList, setStorage } from "../../utils/render";
 
-function generateColor(color) {
+export function generateColor(color) {
   switch (color) {
     case "rose":
       return "bg-rose-400";
       break;
-
+    case "emerald":
+      return "bg-emerald-400";
+      break;
+    case "yellow":
+      return "bg-yellow-400";
+      break;
+    case "gray":
+      return "bg-gray-400";
+      break;
+    case "teal":
+      return "bg-teal-400";
+      break;
     default:
       break;
   }
