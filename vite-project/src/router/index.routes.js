@@ -14,6 +14,7 @@ import {
 } from "../utils/render";
 import { cartPage } from "../screen/cart";
 import { showPopular } from "../screen/home/popular";
+import { ordersPage } from "../screen/order";
 // import { filterHeader } from "../screen/home/brandFilter";
 // import { detail } from "../screen/detailePage";
 
@@ -34,6 +35,7 @@ export const app = () => {
       "/wishlist",
       async (params) => await layout(() => renderWishList(params))
     )
+    .on("/order", async () => await layout(() => ordersPage()))
     .on("/popular", async () => await layout(() => renderPopular()))
     .on("/login", (params) => login(params))
     .on("/onboarding", (params) => loadingPage(params))
