@@ -20,7 +20,7 @@ export const categoriesList = [
   { name: "newbalance" },
   { name: "reebok" },
 ];
-
+// categories brands
 export const categories = (selected) => {
   // console.log(selected);
 
@@ -43,7 +43,7 @@ export const categories = (selected) => {
         eventListener: [
           {
             event: "click",
-
+            // handel page
             callback: async () => {
               if (router.current[0].url === "") {
                 selectedCategory = category.name;

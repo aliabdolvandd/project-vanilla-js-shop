@@ -19,17 +19,18 @@ import { checkoutPage } from "../screen/checkout";
 import { address } from "../screen/checkout/addres";
 import { shipping } from "../screen/checkout/shipping";
 import { paymentMethodsPage } from "../screen/checkout/payment";
-// import { editAddres } from "../screen/checkout/addres";
 
 export const root = document.getElementById("app");
 export const router = new Navigo("/");
 export const app = () => {
   router
     .on("/", async () => await layout(() => home()))
+    // Brands Filter In Home Page
     .on(
       "/products/:brand",
       async (params) => await layout(() => renderProductFilter(params))
     )
+    // Detail Products Page
     .on(
       "/product/:id",
       async (params) => await layout(() => renderDetaile(params))

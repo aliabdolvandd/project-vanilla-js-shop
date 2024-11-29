@@ -59,7 +59,7 @@ export const brandFilter = function () {
     ),
   });
 };
-
+// header on filter page
 export const filterHeader = (brand) => {
   return El({
     element: "div",

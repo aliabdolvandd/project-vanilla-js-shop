@@ -2,7 +2,7 @@ import { router } from "../../router/index.routes";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
 import { render } from "../../utils/render";
-
+// Footer Detail
 const footerItems = [
   {
     icon: svgs.Home,

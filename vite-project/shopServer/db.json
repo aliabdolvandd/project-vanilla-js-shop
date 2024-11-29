@@ -60,6 +60,29 @@
           "quantity": 1,
           "selectedSize": 42,
           "selectedColor": "emerald"
+        },
+        {
+          "id": "1",
+          "title": "adidas",
+          "price": 245,
+          "order": 0,
+          "size": [
+            42,
+            41,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "yellow",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/1.webp",
+          "popular": true,
+          "quantity": 1,
+          "selectedSize": 40,
+          "selectedColor": "rose"
         }
       ],
       "wishlist": [

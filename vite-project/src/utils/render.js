@@ -14,6 +14,7 @@ import { categories } from "../screen/home/list";
 import { cartPage } from "../screen/cart";
 import { createFooter } from "../layout/footer";
 import { mostPopular, showPopular } from "../screen/home/popular";
+// import { searchPage } from "../screen/serchBox";
 
 export const render = function (...children) {
   root.innerHTML = "";
