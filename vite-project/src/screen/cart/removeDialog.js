@@ -35,7 +35,7 @@ export const createDeleteModal = (item) => {
             children: [
               El({
                 element: "img",
-                className: "w-16 h-16 rounded-md object-cover",
+                className: "w-24 h-24 rounded-md object-cover",
                 restAttrs: {
                   src: item.images,
                   alt: item.title,
@@ -43,16 +43,16 @@ export const createDeleteModal = (item) => {
               }),
               El({
                 element: "div",
-                className: "flex gap-2",
+                className: "flex flex-col gap-2",
                 children: [
                   El({
                     element: "h3",
-                    className: "text-gray-800 font-semibold text-sm",
+                    className: "text-gray-800 font-bold text-xl",
                     textContent: item.title,
                   }),
                   El({
                     element: "p",
-                    className: "text-gray-600 text-sm",
+                    className: "text-gray-600 text-lg",
                     textContent: `${item.selectedColor} | Size =${item.selectedSize}`,
                   }),
                   El({

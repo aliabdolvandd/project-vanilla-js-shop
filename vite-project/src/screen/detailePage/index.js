@@ -6,31 +6,47 @@ import { svgs } from "../../svgs";
 import { getData } from "../../api/getApi";
 import { getStorage, renderWishList, setStorage } from "../../utils/render";
 
-function generateColor(color) {
+export function generateColor(color) {
   switch (color) {
     case "rose":
       return "bg-rose-400";
       break;
-
+    case "emerald":
+      return "bg-emerald-400";
+      break;
+    case "yellow":
+      return "bg-yellow-400";
+      break;
+    case "gray":
+      return "bg-gray-400";
+      break;
+    case "teal":
+      return "bg-teal-400";
+      break;
+    case "red":
+      return "bg-red-400";
     default:
       break;
   }
 }
+
 export const detail = function (product) {
-  //   console.log(product);
+  //
   let quantity = 1;
   let selectedColor = [];
   let selectedSize = [];
+  // Update Products Numbers
   const updateQuantity = (newQty) => {
     quantity = newQty;
     qtyElement.textContent = quantity;
     updateTotalPrice();
   };
-
+  // Total Price In Detail Page
   const updateTotalPrice = () => {
     const totalPrice = quantity * product.price;
     totalPriceElement.textContent = `$${totalPrice}`;
   };
+  //Products Numbers
   const qtyElement = El({
     element: "span",
     id: "quantity",
@@ -43,7 +59,7 @@ export const detail = function (product) {
     className: "text-lg font-bold text-gray-800",
     textContent: `$${product.price}`,
   });
-
+  // headers
   return El({
     element: "div",
     className: "flex flex-col gap-1 bg-gray-50 h-full",
@@ -59,7 +75,7 @@ export const detail = function (product) {
           },
         ],
       }),
-
+      // Products
       El({
         element: "div",
         className: "w-full h-60 flex items-center justify-center",
@@ -82,6 +98,7 @@ export const detail = function (product) {
           }),
           El({
             element: "span",
+            // Get Data For Wishlist
             eventListener: [
               {
                 event: "click",
@@ -173,7 +190,7 @@ export const detail = function (product) {
                 children: [
                   El({
                     element: "span",
-                    className: "text-lg font-bold",
+                    className: "text-lg font-bold ",
                     textContent: "Size",
                   }),
                   ...product.size.map((item) => {
@@ -181,13 +198,21 @@ export const detail = function (product) {
                       element: "div",
                       className: `flex justify-center items-center w-6 h-6 rounded-full shadow  shadow-gray`,
                       innerText: item,
+                      restAttrs: { className: "size-option" },
                       eventListener: [
                         {
                           event: "click",
-                          callback: (e) => (selectedSize = item),
-                          if(selectedSize) {
-                            // const targetSpan = e.target.closest("span");
-                            e.classList.add("bg-black");
+                          callback: (e) => {
+                            selectedSize = item;
+                            const allSizes =
+                              document.querySelectorAll(".size-option");
+                            allSizes.forEach((sizeEl) => {
+                              sizeEl.classList.remove("ring-2", "ring-black");
+                            });
+                            e.currentTarget.classList.add(
+                              "ring-2",
+                              "ring-black"
+                            );
                           },
                         },
                       ],
@@ -211,10 +236,22 @@ export const detail = function (product) {
                       className: `w-6 h-6 rounded-full ring ring-[1px] ${generateColor(
                         item
                       )}`,
+                      restAttrs: { className: "color-option" },
                       eventListener: [
                         {
                           event: "click",
-                          callback: (e) => (selectedColor = item),
+                          callback: (e) => {
+                            selectedColor = item;
+                            const allColor =
+                              document.querySelectorAll(".color-option");
+                            allColor.forEach((colorEl) => {
+                              colorEl.classList.remove("ring-2", "ring-black");
+                            });
+                            e.currentTarget.classList.add(
+                              "ring-2",
+                              "ring-black"
+                            );
+                          },
                         },
                       ],
                       //   innerText: `${item}`,
@@ -287,6 +324,7 @@ export const detail = function (product) {
                 className:
                   "mt-6 w-64 bg-black text-white py-3 rounded-full text-lg font-semibold",
                 textContent: "Add to Cart",
+                // add data to server for cart list
                 eventListener: [
                   {
                     event: "click",

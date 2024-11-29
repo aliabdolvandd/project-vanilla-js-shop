@@ -10,115 +10,11 @@
       "wishlist": []
     },
     {
-      "id": "a829",
-      "email": "aliabdolvand@gmail.com",
+      "id": "275f",
+      "email": "aliab@gmail.com",
       "password": "123456",
-      "cart": [
-        {
-          "id": "5",
-          "title": "adidas",
-          "price": 75,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/5.webp",
-          "popular": false,
-          "quantity": 2,
-          "selectedSize": 42,
-          "selectedColor": "teal"
-        }
-      ],
-      "orders": [],
-      "wishlist": [
-        {
-          "id": "2",
-          "title": "adidas",
-          "price": 145,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/2.webp",
-          "popular": false
-        },
-        {
-          "id": "41",
-          "title": "puma",
-          "price": 335,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "puma",
-          "images": "http://localhost:5173/products/puma/1.webp",
-          "popular": false
-        }
-      ]
-    },
-    {
-      "id": "24ce",
-      "email": "ali@gmail.com",
-      "password": "111111",
-      "cart": [
-        {
-          "id": "2",
-          "title": "adidas",
-          "price": 145,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/2.webp",
-          "popular": false,
-          "quantity": 1,
-          "selectedSize": [],
-          "selectedColor": []
-        }
-      ],
-      "orders": [],
-      "wishlist": []
-    },
-    {
-      "id": "842c",
-      "email": "ali@gmail.com",
-      "password": "111111",
-      "cart": [
+      "cart": [],
+      "orders": [
         {
           "id": "2",
           "title": "adidas",
@@ -139,43 +35,56 @@
           "images": "http://localhost:5173/products/adidas/2.webp",
           "popular": false,
           "quantity": 4,
-          "selectedSize": [],
-          "selectedColor": []
-        }
-      ],
-      "orders": [],
-      "wishlist": []
-    },
-    {
-      "id": "ad82",
-      "email": "ali@gmail.com",
-      "password": "111111",
-      "cart": [
+          "selectedSize": 44,
+          "selectedColor": "rose"
+        },
         {
-          "id": "3",
-          "title": "adidas",
-          "price": 110,
+          "id": "12",
+          "title": "asics",
+          "price": 165,
           "order": 0,
           "size": [
             44,
-            43,
+            42,
             40
           ],
           "color": [
-            "red",
+            "rose",
             "emerald",
             "teal",
             "gray"
           ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/3.webp",
+          "brand": "asics",
+          "images": "http://localhost:5173/products/asics/4.webp",
           "popular": false,
           "quantity": 1,
-          "selectedSize": [],
-          "selectedColor": []
+          "selectedSize": 42,
+          "selectedColor": "emerald"
+        },
+        {
+          "id": "1",
+          "title": "adidas",
+          "price": 245,
+          "order": 0,
+          "size": [
+            42,
+            41,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "yellow",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/products/adidas/1.webp",
+          "popular": true,
+          "quantity": 1,
+          "selectedSize": 40,
+          "selectedColor": "rose"
         }
       ],
-      "orders": [],
       "wishlist": [
         {
           "id": "2",
@@ -196,48 +105,32 @@
           "brand": "adidas",
           "images": "http://localhost:5173/products/adidas/2.webp",
           "popular": false
-        },
-        {
-          "id": "4",
-          "title": "adidas",
-          "price": 223,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            39
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/4.webp",
-          "popular": true
-        },
-        {
-          "id": "7",
-          "title": "adidas",
-          "price": 83,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/products/adidas/7.webp",
-          "popular": false
         }
-      ]
+      ],
+      "shippingMethod": {
+        "title": "Express",
+        "details": "Estimated Arrival Des 20-21",
+        "price": 30
+      }
+    },
+    {
+      "id": "1d17",
+      "shippingMethod": {
+        "title": "Express",
+        "details": "Estimated Arrival Des 20-21",
+        "price": 30
+      }
+    },
+    {
+      "id": "ac5c",
+      "shippingMethod": {
+        "title": "Express",
+        "details": "Estimated Arrival Des 20-21",
+        "price": 30
+      }
+    },
+    {
+      "id": "b7ef"
     }
   ],
   "Products": [

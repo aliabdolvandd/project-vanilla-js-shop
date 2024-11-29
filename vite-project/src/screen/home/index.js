@@ -9,9 +9,10 @@ import { brandFilter, filterHeader } from "./brandFilter";
 import { router } from "../../router/index.routes";
 import { wishList } from "../wishList";
 import { renderCategoryItems } from "../../utils/render";
+import { search } from "../serchBox";
 
 // const isWishList = false;
-
+// Header In HOME
 export const header = function (data) {
   return El({
     element: "div",
@@ -69,28 +70,7 @@ export const header = function (data) {
     ],
   });
 };
-
-const search = () => {
-  return El({
-    element: "div",
-    className:
-      "flex items-center px-4 py-2 bg-gray-100 shadow-sm w-[400px] ml-10 mt-2 max-w-sm",
-    children: [
-      El({
-        element: "span",
-        className: "w-5 h-5 text-gray-400 mr-2",
-        innerHTML: svgs.search,
-      }),
-      El({
-        element: "input",
-        className:
-          "flex-grow bg-gray-100 border-none focus:outline-none text-gray-700 text-sm placeholder-gray-400",
-        restAttrs: { type: "text", placeholder: "Search" },
-      }),
-    ],
-  });
-};
-
+//Show Products
 export const allProduct = (data) => {
   const allProducts = El({
     element: "div",
@@ -130,7 +110,7 @@ export const allProduct = (data) => {
   });
   return allProducts;
 };
-
+// Render Home Page
 export const home = async () => {
   return El({
     element: "div",

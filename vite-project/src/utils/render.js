@@ -13,6 +13,9 @@ import { wishList } from "../screen/wishList";
 import { categories } from "../screen/home/list";
 import { cartPage } from "../screen/cart";
 import { createFooter } from "../layout/footer";
+import { mostPopular, showPopular } from "../screen/home/popular";
+// import { searchPage } from "../screen/serchBox";
+
 export const render = function (...children) {
   root.innerHTML = "";
 
@@ -31,7 +34,18 @@ export const renderProduct = async () => {
 
   return allProduct(data);
 };
-
+export const renderPopular = async (params, brandName = "", selected) => {
+  const data = await getData(`/Products?popular=true&brand=${brandName}`);
+  const product = data;
+  if (product) {
+    const pagePopular = El({
+      element: "div",
+      className: "flex flex-col gap-4",
+      children: [showPopular(), categories(selected), allProduct(product)],
+    });
+    return pagePopular;
+  }
+};
 export const renderProductFilter = async (params) => {
   const brand = params.data.brand;
   const data = await getData(`/Products?brand=${brand}`);
@@ -53,20 +67,14 @@ export const renderWishList = async () => {
   const data = await getData("/users/" + getStorage("user").id);
   const wishProducts = data.wishlist;
   // console.log(products);
-  const pageWislList = El({
+  const pageWishList = El({
     element: "div",
     children: [wishList(), allProduct(wishProducts)],
   });
-  return pageWislList;
+  return pageWishList;
 };
-// export const renderProductWish = async () => {
-//   const productWish = await getData(`/users/${data.wishlist}`);
-//   console.log(productWish);
-//   return allProduct(productWish);
-// };
-export const renderCategoryItems = async (brand = "all") => {
-  // const brand = params.brand;
 
+export const renderCategoryItems = async (brand = "all") => {
   const data =
     brand === "all"
       ? await getData(`/Products`)
@@ -75,7 +83,7 @@ export const renderCategoryItems = async (brand = "all") => {
     element: "div",
     children: [allProduct(data)],
   });
-  // console.log(data);
+
   return categoryContainer;
 };
 export const renderCartPage = async () => {
@@ -86,6 +94,19 @@ export const renderCartPage = async () => {
 
   return cartPage(cartProduct);
 };
+
+// export const renderCheckoutPage = async () => {
+//   const userId = getStorage("user").id;
+//   const userData = await getData(`/users/${userId}`);
+//   const cart = userData.cart || [];
+
+//   // const cartProduct = data.cart || [];
+//   const checkoutPage = El({
+//     element: "div",
+//     children: [productCheckout(cart)],
+//   });
+//   return checkoutPage;
+// };
 
 export const reRender = function (...children) {
   root.innerHTML = "";

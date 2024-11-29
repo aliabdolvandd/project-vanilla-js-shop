@@ -10,6 +10,9 @@ import { svgs } from "../../svgs";
 import { patchRequest } from "../../api/patch";
 import { createDeleteModal } from "./removeDialog";
 import { layout } from "../../layout";
+import { generateColor } from "../detailePage";
+import { setStorage } from "../../utils/render";
+import { router } from "../../router/index.routes";
 
 let updateQuantity = async function (productId, change) {
   let userData = getStorage("user");
@@ -27,7 +30,7 @@ let updateQuantity = async function (productId, change) {
   }
 };
 
-let TotalPriceCart = function (items, productPrice) {
+export let TotalPriceCart = function (items, productPrice) {
   let userData = getStorage("user");
   let cart = userData.cart || [];
   // sum = 0
@@ -97,11 +100,15 @@ export const cartPage = function (cartProduct) {
                     children: [
                       El({
                         element: "div",
-                        className: "w-4 h-4 rounded-full ring-1",
+                        className: `w-4 h-4 rounded-full ring-1 ${generateColor(
+                          items.selectedColor
+                        )}`,
                       }),
                       El({
                         element: "span",
-                        className: "text-lg text-gray-400",
+                        className: `text-lg${generateColor(
+                          items.selectedColor
+                        )}`,
                         innerText: `${items.selectedColor} | Size: ${items.selectedSize}`,
                       }),
                     ],
@@ -185,7 +192,7 @@ export const cartPage = function (cartProduct) {
                 element: "span",
                 id: "totalPrice",
                 className: "text-2xl font-bold text-gray-900",
-                innerText: `${TotalPriceCart(cartProduct)}`,
+                innerText: `$${TotalPriceCart(cartProduct)}`,
               }),
             ],
           }),
@@ -194,6 +201,12 @@ export const cartPage = function (cartProduct) {
             className:
               "w-60 h-14 bg-black text-white py-2 px-6 rounded-full font-semibold text-lg",
             innerText: "Checkout ",
+            eventListener: [
+              {
+                event: "click",
+                callback: () => router.navigate("/checkout"),
+              },
+            ],
           }),
         ],
       }),

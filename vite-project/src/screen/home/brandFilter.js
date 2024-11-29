@@ -59,7 +59,7 @@ export const brandFilter = function () {
     ),
   });
 };
-
+// header on filter page
 export const filterHeader = (brand) => {
   return El({
     element: "div",
@@ -84,11 +84,3 @@ export const filterHeader = (brand) => {
     ],
   });
 };
-
-// export const showPageBrand = () => {
-//   return El({
-//     element: "div",
-//     className: "flex-1",
-//     children: [filterHeader()],
-//   });
-// };
