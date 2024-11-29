@@ -11,6 +11,8 @@ import { patchRequest } from "../../api/patch";
 import { createDeleteModal } from "./removeDialog";
 import { layout } from "../../layout";
 import { generateColor } from "../detailePage";
+import { setStorage } from "../../utils/render";
+import { router } from "../../router/index.routes";
 
 let updateQuantity = async function (productId, change) {
   let userData = getStorage("user");
@@ -28,7 +30,7 @@ let updateQuantity = async function (productId, change) {
   }
 };
 
-let TotalPriceCart = function (items, productPrice) {
+export let TotalPriceCart = function (items, productPrice) {
   let userData = getStorage("user");
   let cart = userData.cart || [];
   // sum = 0
@@ -199,6 +201,12 @@ export const cartPage = function (cartProduct) {
             className:
               "w-60 h-14 bg-black text-white py-2 px-6 rounded-full font-semibold text-lg",
             innerText: "Checkout ",
+            eventListener: [
+              {
+                event: "click",
+                callback: () => router.navigate("/checkout"),
+              },
+            ],
           }),
         ],
       }),

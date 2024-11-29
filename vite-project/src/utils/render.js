@@ -14,6 +14,7 @@ import { categories } from "../screen/home/list";
 import { cartPage } from "../screen/cart";
 import { createFooter } from "../layout/footer";
 import { mostPopular, showPopular } from "../screen/home/popular";
+
 export const render = function (...children) {
   root.innerHTML = "";
 
@@ -65,11 +66,11 @@ export const renderWishList = async () => {
   const data = await getData("/users/" + getStorage("user").id);
   const wishProducts = data.wishlist;
   // console.log(products);
-  const pageWishlList = El({
+  const pageWishList = El({
     element: "div",
     children: [wishList(), allProduct(wishProducts)],
   });
-  return pageWishlList;
+  return pageWishList;
 };
 
 export const renderCategoryItems = async (brand = "all") => {
@@ -92,6 +93,19 @@ export const renderCartPage = async () => {
 
   return cartPage(cartProduct);
 };
+
+// export const renderCheckoutPage = async () => {
+//   const userId = getStorage("user").id;
+//   const userData = await getData(`/users/${userId}`);
+//   const cart = userData.cart || [];
+
+//   // const cartProduct = data.cart || [];
+//   const checkoutPage = El({
+//     element: "div",
+//     children: [productCheckout(cart)],
+//   });
+//   return checkoutPage;
+// };
 
 export const reRender = function (...children) {
   root.innerHTML = "";

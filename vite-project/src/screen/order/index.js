@@ -23,7 +23,7 @@ const renderOrderItem = (order) => {
       }),
       El({
         element: "img",
-        src: order.image, // تصویر محصول
+        src: order.image,
         alt: order.title,
         className: "w-12 h-12 rounded",
       }),
@@ -34,30 +34,29 @@ const renderOrderItem = (order) => {
 const toggleTab = (tab) => {
   const ordersContainer = document.querySelector("#ordersContainer");
   if (tab === "active") {
-    ordersContainer.innerHTML = ""; // پاک کردن محتویات قبلی
-    const activeOrders = getActiveOrders(); // تابعی برای دریافت سفارشات فعال
+    ordersContainer.innerHTML = "";
+    const activeOrders = getActiveOrders();
     if (activeOrders.length > 0) {
       activeOrders.forEach((order) => {
-        ordersContainer.appendChild(renderOrderItem(order));
+        ordersContainer.append(renderOrderItem(order));
       });
     } else {
-      ordersContainer.appendChild(renderEmptyMessage("active"));
+      ordersContainer.append(renderEmptyMessage("active"));
     }
   } else if (tab === "completed") {
-    // نمایش سفارشات تکمیل شده
     ordersContainer.innerHTML = "";
-    const completedOrders = getCompletedOrders(); // تابعی برای دریافت سفارشات تکمیل شده
+    const completedOrders = getCompletedOrders();
     if (completedOrders.length > 0) {
       completedOrders.forEach((order) => {
-        ordersContainer.appendChild(renderOrderItem(order));
+        ordersContainer.append(renderOrderItem(order));
       });
     } else {
-      ordersContainer.appendChild(renderEmptyMessage("completed"));
+      ordersContainer.append(renderEmptyMessage("completed"));
     }
   }
 };
 
-// Mock functions for orders
+// test order
 const getActiveOrders = () => {
   return [
     { title: "Product A", price: 120, image: "path-to-image-a.svg" },
@@ -99,12 +98,12 @@ export const ordersPage = () => {
               El({
                 element: "button",
                 className: "w-5 h-5 text-gray-400",
-                innerHTML: svgs.search, // آیکون جستجو
+                innerHTML: svgs.search,
               }),
               El({
                 element: "button",
                 className: "w-5 h-5 text-gray-400",
-                innerHTML: svgs.More, // آیکون پروفایل
+                innerHTML: svgs.More,
               }),
             ],
           }),

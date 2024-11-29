@@ -23,6 +23,8 @@ export function generateColor(color) {
     case "teal":
       return "bg-teal-400";
       break;
+    case "red":
+      return "bg-red-400";
     default:
       break;
   }
@@ -184,7 +186,7 @@ export const detail = function (product) {
                 children: [
                   El({
                     element: "span",
-                    className: "text-lg font-bold",
+                    className: "text-lg font-bold ",
                     textContent: "Size",
                   }),
                   ...product.size.map((item) => {

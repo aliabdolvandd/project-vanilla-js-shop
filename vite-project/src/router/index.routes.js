@@ -15,8 +15,11 @@ import {
 import { cartPage } from "../screen/cart";
 import { showPopular } from "../screen/home/popular";
 import { ordersPage } from "../screen/order";
-// import { filterHeader } from "../screen/home/brandFilter";
-// import { detail } from "../screen/detailePage";
+import { checkoutPage } from "../screen/checkout";
+import { address } from "../screen/checkout/addres";
+import { shipping } from "../screen/checkout/shipping";
+import { paymentMethodsPage } from "../screen/checkout/payment";
+// import { editAddres } from "../screen/checkout/addres";
 
 export const root = document.getElementById("app");
 export const router = new Navigo("/");
@@ -35,11 +38,16 @@ export const app = () => {
       "/wishlist",
       async (params) => await layout(() => renderWishList(params))
     )
+    .on("/payment", async () => await paymentMethodsPage())
+    .on("/addres", () => address())
+    .on("/shipping", () => shipping())
+    .on("/checkout", async (params) => await layout(() => checkoutPage(params)))
     .on("/order", async () => await layout(() => ordersPage()))
     .on("/popular", async () => await layout(() => renderPopular()))
     .on("/login", (params) => login(params))
     .on("/onboarding", (params) => loadingPage(params))
-    .on("/cart", async (params) => await layout(renderCartPage))
+    .on("/cart", async () => await layout(() => renderCartPage()))
+    // .on("/cart", async (params) => await layout( => renderCartPage)
 
     .resolve();
 };
