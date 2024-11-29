@@ -1,6 +1,9 @@
 import { El } from "../../script";
 import { svgs } from "../../svgs";
-import { render } from "../../utils/render";
+import { render, setStorage } from "../../utils/render";
+import { validateEmail, validatePassword } from "./validateE";
+import { postRequest } from "../../api/post";
+import { router } from "../../router/index.routes";
 
 const formContainer = El({
   element: "div",
@@ -108,10 +111,40 @@ form.append(
   submitButton
 );
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  if (!validatePassword(password)) {
+    alert("Password must be at least 6 characters.");
+    return;
+  }
+
+  try {
+    const result = await postRequest("/users", {
+      email,
+      password,
+      cart: [],
+      orders: [],
+      wishlist: [],
+    });
+    setStorage("user", result);
+    router.navigate("/");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 formContainer.append(logo, form);
-formContainer.append(logo, form);
-export const login = (params) => {
-  console.log(params);
+export const login = () => {
+  console.log();
 
   return render(formContainer);
 };
