@@ -2,12 +2,13 @@ import { data } from "autoprefixer";
 import { getData } from "../../api/getApi";
 import { El } from "../../script";
 import { svgs } from "../../svgs";
-import { renderProduct } from "../../utils/render";
+// import { renderCategori, renderProduct } from "../../utils/render";
 import { mostPopular } from "./popular";
 import { categories } from "./list";
 import { brandFilter, filterHeader } from "./brandFilter";
 import { router } from "../../router/index.routes";
 import { wishList } from "../wishList";
+import { renderCategoryItems } from "../../utils/render";
 
 // const isWishList = false;
 
@@ -140,8 +141,14 @@ export const home = async () => {
       brandFilter(),
 
       mostPopular(),
+      // await renderProduct(),
       categories(),
-      await renderProduct(),
+      // await renderCategori(),
+      El({
+        element: "div",
+        id: "productList",
+        children: [await renderCategoryItems()],
+      }),
     ],
   });
 };

@@ -3,6 +3,7 @@ const BASE_URL = "http://localhost:5173";
 export const getData = async (endpoint) => {
   try {
     const url = `${BASE_URL}${endpoint}`;
+
     const response = await fetch(url);
 
     if (!response.ok) {

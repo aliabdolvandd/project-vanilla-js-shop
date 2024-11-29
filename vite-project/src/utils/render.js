@@ -5,12 +5,14 @@ import { postRequest } from "../api/post";
 import { root } from "../router/index.routes";
 import { detail } from "../screen/detailePage";
 import { allProduct } from "../screen/home";
-import { filterHeader } from "../screen/home/brandFilter";
+import { brands, filterHeader } from "../screen/home/brandFilter";
 // import { wishList } from "../screen/wishList";
 
 import { El } from "../script";
 import { wishList } from "../screen/wishList";
-
+import { categories } from "../screen/home/list";
+import { cartPage } from "../screen/cart";
+import { createFooter } from "../layout/footer";
 export const render = function (...children) {
   root.innerHTML = "";
 
@@ -62,3 +64,35 @@ export const renderWishList = async () => {
 //   console.log(productWish);
 //   return allProduct(productWish);
 // };
+export const renderCategoryItems = async (brand = "all") => {
+  // const brand = params.brand;
+
+  const data =
+    brand === "all"
+      ? await getData(`/Products`)
+      : await getData(`/Products?brand=${brand}`);
+  const categoryContainer = El({
+    element: "div",
+    children: [allProduct(data)],
+  });
+  // console.log(data);
+  return categoryContainer;
+};
+export const renderCartPage = async () => {
+  const data = await getData("/users/" + getStorage("user").id || "");
+
+  const cartProduct = data.cart || [];
+  // console.log(cartProduct);
+
+  return cartPage(cartProduct);
+};
+
+export const reRender = function (...children) {
+  root.innerHTML = "";
+  const footerEl = El({
+    element: "footer",
+    className: "fixed bottom-0 left-0 w-full",
+    children: [createFooter()],
+  });
+  root.append(...children, footerEl);
+};
