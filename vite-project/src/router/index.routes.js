@@ -6,11 +6,12 @@ import { login } from "../layout/login";
 import { loading, loadingPage } from "../layout/onboarding/loading";
 import {
   render,
+  renderCartPage,
   renderDetaile,
   renderProductFilter,
   renderWishList,
 } from "../utils/render";
-import { cart } from "../screen/cart";
+import { cartPage } from "../screen/cart";
 // import { filterHeader } from "../screen/home/brandFilter";
 // import { detail } from "../screen/detailePage";
 
@@ -31,10 +32,11 @@ export const app = () => {
       "/wishlist",
       async (params) => await layout(() => renderWishList(params))
     )
+    // .on("/", async (params) => await layout(() => renderCategori(params)))
     // .on("/products", () => layout(products()))
     .on("/login", (params) => login(params))
     .on("/onboarding", (params) => loadingPage(params))
-    .on("/cart", async (params) => await layout(cart))
+    .on("/cart", async (params) => await layout(renderCartPage))
 
     .resolve();
 };
