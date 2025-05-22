@@ -136,6 +136,7 @@ form.addEventListener("submit", async (e) => {
       wishlist: [],
     });
     setStorage("user", result);
+    setStorage("visitedFirstTime", true);
     router.navigate("/");
   } catch (error) {
     console.log(error);
@@ -145,6 +146,5 @@ form.addEventListener("submit", async (e) => {
 formContainer.append(logo, form);
 export const login = () => {
   console.log();
-
   return render(formContainer);
 };
